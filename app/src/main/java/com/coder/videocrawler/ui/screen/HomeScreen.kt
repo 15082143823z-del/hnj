@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package com.coder.videocrawler.ui.screen
 
 import android.content.Intent
@@ -19,6 +21,7 @@ import com.coder.videocrawler.model.VideoPlatform
 import com.coder.videocrawler.service.DownloadState
 import com.coder.videocrawler.service.YtDlpManager
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(viewModel: HomeViewModel = viewModel()) {
     val state by viewModel.state.collectAsState()
