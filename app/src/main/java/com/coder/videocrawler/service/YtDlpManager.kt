@@ -23,6 +23,7 @@ object YtDlpManager {
     private var binaryPath: String = ""
     private var useTermux: Boolean = false
     private var isReady: Boolean = false
+    private var appContext: Context? = null
 
     /** 初始化结果 */
     data class InitResult(
@@ -35,6 +36,7 @@ object YtDlpManager {
     /** 初始化：检测可用的 yt-dlp */
     suspend fun init(context: Context): InitResult = withContext(Dispatchers.IO) {
         try {
+            appContext = context.applicationContext
             // 策略 1: 检查 Termux
             if (isTermuxInstalled(context)) {
                 val ytDlp = File(TERMUX_YT_DLP)
@@ -120,7 +122,7 @@ object YtDlpManager {
                         directory(File(termuxHome))
                         environment()["HOME"] = termuxHome
                     }
-                    environment()["TMPDIR"] = context?.cacheDir?.absolutePath ?: "/data/local/tmp"
+                    environment()["TMPDIR"] = appContext?.cacheDir?.absolutePath ?: "/data/local/tmp"
                     environment()["PATH"] = "/data/data/com.termux/files/usr/bin:/system/bin"
                 }
                 .redirectErrorStream(true)
@@ -165,7 +167,7 @@ object YtDlpManager {
                         directory(File(termuxHome))
                         environment()["HOME"] = termuxHome
                     }
-                    environment()["TMPDIR"] = context?.cacheDir?.absolutePath ?: "/data/local/tmp"
+                    environment()["TMPDIR"] = appContext?.cacheDir?.absolutePath ?: "/data/local/tmp"
                     environment()["PATH"] = "/data/data/com.termux/files/usr/bin:/system/bin"
                 }
                 .redirectErrorStream(true)
