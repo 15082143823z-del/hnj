@@ -18,7 +18,6 @@
 
     <!-- 下载箭头 -->
     <path
-        android:fillColor="#FFFFFF"
         android:pathData="M50,76L50,64M50,76L43,69M50,76L57,69"
         android:strokeWidth="3"
         android:strokeColor="#FFFFFF"
