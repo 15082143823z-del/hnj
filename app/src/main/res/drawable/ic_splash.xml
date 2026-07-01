@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 启动页图标：居中 Logo -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 圆形背景 -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M54,54m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" />
+
+    <!-- 播放三角 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,35L74,54L44,73Z" />
+
+</vector>

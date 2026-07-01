@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 启动页主题 -->
+    <style name="Theme.VideoCrawler.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#1A1A2E</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.VideoCrawler</item>
+    </style>
+
+    <!-- 主应用主题 -->
+    <style name="Theme.VideoCrawler" parent="android:Theme.Material.Light.NoActionBar" />
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ 启动页（支持更精细控制） -->
+    <style name="Theme.VideoCrawler.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#1A1A2E</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="windowSplashScreenIconBackgroundColor">#1A1A2E</item>
+        <item name="postSplashScreenTheme">@style/Theme.VideoCrawler</item>
+    </style>
+</resources>
